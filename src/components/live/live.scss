@@ -1,0 +1,153 @@
+.live {
+  display: none;
+
+  @include mlg {
+    position: sticky;
+    top: 0;
+    display: block;
+    height: 100vh;
+    height: 100dvh;
+    padding: rem(20) rem(12);
+    overflow: hidden auto;
+    background: var(--bg);
+    scrollbar-width: thin;
+  }
+
+  //.live__socials
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: rem(6);
+  }
+
+  //.live__social
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include w_h(28);
+    border-radius: 50%;
+    color: var(--white);
+    transition: transform var(--transition);
+
+    @include hover {
+      transform: translateY(rem(-2));
+    }
+
+    //.live__social--telegram
+    &--telegram {
+      background: var(--telegram);
+    }
+
+    //.live__social--vk
+    &--vk {
+      background: var(--vk);
+    }
+
+    //.live__social--ok
+    &--ok {
+      background: var(--ok);
+    }
+
+    //.live__social--x
+    &--x {
+      background: var(--x);
+    }
+
+    //.live__social--viber
+    &--viber {
+      background: var(--viber);
+    }
+
+    //.live__social--whatsapp
+    &--whatsapp {
+      background: var(--whatsapp);
+    }
+  }
+
+  //.live__tab
+  &__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+    min-height: rem(44);
+    margin-top: rem(16);
+    border-radius: var(--br);
+    background: var(--bg-panel);
+  }
+
+  //.live__head
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(8);
+    margin: rem(24) 0 rem(16);
+    padding-left: rem(8);
+  }
+
+  //.live__lang
+  &__lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(10) rem(14);
+    border-radius: var(--br);
+    background: var(--bg-panel);
+  }
+
+  //.live__list
+  &__list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: rem(12);
+  }
+}
+
+.live-item {
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+  padding: rem(14);
+  border-radius: var(--br);
+  background: var(--bg-dark);
+  font-size: rem(14);
+  line-height: 1.6;
+
+  //.live-item__img
+  &__img {
+    flex-shrink: 0;
+    @include w_h(68);
+    overflow: hidden;
+    border-radius: rem(4);
+    @include imgCover;
+  }
+
+  //.live-item__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  //.live-item__player
+  &__player {
+    color: var(--text-muted);
+    font-size: rem(15);
+    font-weight: 700;
+  }
+
+  //.live-item__sum
+  &__sum {
+    font-weight: 500;
+  }
+
+  //.live-item__game
+  &__game {
+    overflow: hidden;
+    color: var(--primary-hover);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

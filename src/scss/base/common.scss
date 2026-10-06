@@ -1,0 +1,173 @@
+.flex {
+  display: flex;
+}
+.i-flex {
+  display: inline-flex;
+}
+.grid {
+  display: grid;
+}
+.flex-cc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv {
+  align-items: center;
+}
+.as {
+  align-items: flex-start;
+}
+.fe {
+  align-items: flex-end;
+}
+.ch {
+  justify-content: center;
+}
+.sb {
+  justify-content: space-between;
+}
+.je {
+  justify-content: flex-end;
+}
+.fw {
+  flex-wrap: wrap;
+}
+.dc {
+  flex-direction: column;
+}
+.max {
+  flex: 1;
+}
+.w-100 {
+  width: 100%;
+}
+.mt_a {
+  margin-top: auto;
+}
+
+.center {
+  text-align: center;
+}
+.ttu {
+  text-transform: uppercase;
+}
+.medium {
+  font-weight: 500;
+}
+.bold {
+  font-weight: 700;
+}
+.extrabold {
+  font-weight: 800;
+}
+.text-muted {
+  color: var(--text-muted);
+}
+.text-money {
+  color: var(--money);
+}
+.text-accent {
+  color: var(--yellow);
+}
+
+.visually-hidden {
+  @include visuallyHidden;
+}
+
+.link {
+  transition: color var(--transition);
+
+  svg {
+    color: inherit;
+  }
+
+  @include hover {
+    color: var(--primary-hover);
+  }
+}
+
+$h-list: 8, 12, 16, 24, 32, 48, 64;
+@each $h in $h-list {
+  .mt_#{$h} {
+    margin-top: var(--h#{$h});
+  }
+  .mb_#{$h} {
+    margin-bottom: var(--h#{$h});
+  }
+}
+
+$gap-list: 4, 8, 12, 16, 24, 32;
+@each $g in $gap-list {
+  .gap_#{$g} {
+    gap: var(--gap#{$g});
+  }
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-weight: 800;
+  line-height: 1.2;
+}
+.h1 {
+  font-size: var(--H1);
+  line-height: 1.1;
+}
+.h2 {
+  font-size: var(--H2);
+}
+.h3 {
+  font-size: var(--H3);
+  font-weight: 700;
+  line-height: 1.3;
+}
+.h4 {
+  font-size: var(--H4);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.p1 {
+  font-size: rem(16);
+  line-height: 1.5;
+
+  @include msm {
+    font-size: rem(18);
+  }
+}
+.p2 {
+  font-size: rem(15);
+  line-height: 1.5;
+
+  @include msm {
+    font-size: rem(16);
+  }
+}
+.p3 {
+  font-size: rem(13);
+  line-height: 1.45;
+
+  @include msm {
+    font-size: rem(14);
+  }
+}
+.p4 {
+  font-size: rem(12);
+  line-height: 1.45;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  @include w_h(24);
+}
+
+$icon-list: 16, 20, 24, 32;
+@each $size in $icon-list {
+  .icon-#{$size} {
+    @include w_h($size);
+  }
+}

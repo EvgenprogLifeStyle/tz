@@ -1,0 +1,33 @@
+.faq-item {
+  border-radius: var(--br-lg);
+  background: var(--bg-panel);
+
+  //.faq-item__head
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(16);
+    padding: rem(18) var(--p24);
+    transition: color var(--transition);
+
+    @include hover {
+      color: var(--primary-hover);
+    }
+  }
+
+  //.faq-item__arrow
+  &__arrow {
+    color: var(--text-muted);
+    transition: transform var(--transition);
+  }
+
+  //.faq-item__body
+  &__body {
+    padding: 0 var(--p24) var(--p24);
+  }
+
+  &[open] .faq-item__arrow {
+    transform: rotate(180deg);
+  }
+}

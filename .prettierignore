@@ -1,0 +1,7 @@
+dist
+node_modules
+src/js/libs
+src/scss/base/libs
+**/*.min.js
+**/*.min.css
+gulp/version.json

@@ -1,0 +1,235 @@
+.hero {
+  position: relative;
+  z-index: 0;
+  display: grid;
+  gap: var(--gap32);
+  padding-top: var(--h32);
+
+  @include mmd {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+  }
+
+  //.hero__deco
+  &__deco {
+    position: absolute;
+    z-index: -1;
+    top: rem(-40);
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    color: rgb(255 255 255 / 3%);
+    font-size: rem(160);
+    font-weight: 800;
+    line-height: 1;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+
+    @include mmd {
+      top: rem(-60);
+      font-size: rem(340);
+    }
+  }
+
+  //.hero__bonus
+  &__bonus {
+    display: grid;
+    gap: rem(12);
+    max-width: rem(460);
+  }
+
+  //.hero__social
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap8);
+  }
+
+  //.hero__media
+  &__media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap16);
+  }
+
+  //.hero__card
+  &__card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border: 2px solid var(--primary);
+    border-radius: var(--br-lg);
+    transition: transform var(--transition);
+
+    @include hover {
+      transform: translateY(rem(-4));
+    }
+
+    //.hero__card--sport
+    &--sport {
+      border-color: var(--green);
+    }
+
+    //.hero__card-img
+    &-img {
+      display: block;
+      aspect-ratio: 2 / 3;
+      @include imgCover;
+    }
+  }
+}
+
+.payments {
+  display: grid;
+  gap: var(--gap32);
+  padding: var(--p32);
+  border-radius: var(--br-lg);
+  background: var(--bg-panel);
+
+  @include mmd {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    padding-block: rem(80);
+  }
+
+  //.payments__img
+  &__img {
+    display: block;
+    width: 100%;
+    max-width: rem(460);
+    margin-inline: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.support {
+  position: relative;
+  z-index: 0;
+  display: grid;
+  justify-items: center;
+  gap: var(--gap32);
+  overflow: hidden;
+  padding: var(--p32);
+  border-radius: var(--br-lg);
+  background: var(--bg-panel);
+
+  @include mmd {
+    grid-template-columns: minmax(0, 1fr) rem(400);
+    align-items: center;
+    justify-items: stretch;
+    padding-block: rem(48);
+  }
+
+  //.support__img
+  &__img {
+    display: block;
+    width: 100%;
+    max-width: rem(400);
+    border-radius: var(--br-lg);
+    box-shadow: 0 rem(16) rem(40) rgb(0 0 0 / 35%);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  //.support__deco
+  &__deco {
+    position: absolute;
+    z-index: -1;
+    top: rem(-60);
+    right: 0;
+    color: rgb(255 255 255 / 4%);
+    font-size: rem(260);
+    font-weight: 800;
+    line-height: 1;
+    pointer-events: none;
+
+    @include mmd {
+      right: rem(80);
+      font-size: rem(420);
+    }
+  }
+}
+
+.bonuses {
+  display: grid;
+  gap: var(--gap32);
+
+  @include mmd {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+
+  //.bonuses__list
+  &__list {
+    display: grid;
+    gap: var(--gap12);
+  }
+}
+
+.community {
+  display: grid;
+  gap: var(--gap32);
+  padding: var(--p32);
+  border-radius: var(--br-lg);
+  background: var(--bg-panel);
+
+  @include mmd {
+    grid-template-columns: rem(380) minmax(0, 1fr);
+    align-items: center;
+  }
+
+  //.community__img
+  &__img {
+    display: block;
+    width: 100%;
+    max-width: rem(380);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.review {
+  padding: var(--p32);
+  border-radius: var(--br-lg);
+  background: var(--bg-panel);
+
+  //.review__text
+  &__text {
+    max-width: rem(860);
+  }
+}
+
+.faq {
+  display: grid;
+  gap: var(--gap32);
+
+  @include mmd {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    align-items: start;
+  }
+
+  //.faq__intro
+  &__intro {
+    @include mmd {
+      position: sticky;
+      top: calc(var(--heightHeader) + var(--h24));
+    }
+  }
+
+  //.faq__list
+  &__list {
+    display: grid;
+    gap: var(--gap12);
+  }
+}

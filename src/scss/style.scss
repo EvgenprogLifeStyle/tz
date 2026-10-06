@@ -1,0 +1,31 @@
+@import "fonts";
+@import "base/base";
+
+html {
+  font-size: 1px;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+
+  @include mfull {
+    font-size: calc(100vw / 1920);
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font: var(--font);
+}
+
+[id] {
+  scroll-margin-top: calc(var(--heightHeader) + var(--h16));
+}
+
+@import "../components/logo/logo", "../components/header/header", "../components/footer/footer",
+  "../components/live/live", "../components/promo-code/promo-code",
+  "../components/providers/providers", "../components/showcase/showcase", "../components/bonus-card/bonus-card",
+  "../components/bets/bets", "../components/faq-item/faq-item";
+
+@import "./pages/main";

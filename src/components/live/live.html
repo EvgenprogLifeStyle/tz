@@ -1,0 +1,30 @@
+<aside class="live" aria-labelledby="live-title">
+  <ul class="live__socials">
+    @@loop('live-social.html', [
+      {"href":"https://t.me/","icon":"telegram","name":"Telegram"},
+      {"href":"https://vk.com/","icon":"vk","name":"ВКонтакте"},
+      {"href":"https://ok.ru/","icon":"ok","name":"Одноклассниках"},
+      {"href":"https://x.com/","icon":"x","name":"X"},
+      {"href":"https://www.viber.com/","icon":"viber","name":"Viber"},
+      {"href":"https://www.whatsapp.com/","icon":"whatsapp","name":"WhatsApp"}
+    ])
+  </ul>
+  <h2 class="live__tab p3 bold" id="live-title">
+    <svg class="icon icon-16" aria-hidden="true"><use xlink:href="@img/sprite.svg#pulse"></use></svg>
+    Live
+  </h2>
+  <div class="live__head">
+    <p class="p2 text-muted">Online: 2 438</p>
+    <span class="live__lang">
+      <span class="flag" aria-hidden="true"></span>
+      <span class="visually-hidden">Язык: русский</span>
+    </span>
+  </div>
+  <ul class="live__list">
+    @@loop('live-item.html', [
+      {"player":"selector43403059","sum":"19768","game":"El Dorado Infinity Reels™"},
+      {"player":"selector11724774","sum":"23915","game":"10x Rewind"},
+      {"player":"selector37285850","sum":"2891","game":"Rich Wilde and the Wandering City"}
+    ])
+  </ul>
+</aside>

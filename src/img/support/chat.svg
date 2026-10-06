@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 636">
+  <defs>
+    <clipPath id="frame">
+      <rect width="410" height="636" rx="16" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#frame)" font-family="Arial, sans-serif">
+    <rect width="410" height="636" fill="#20242d" />
+    <rect width="410" height="142" fill="#0a74fa" />
+    <circle cx="420" cy="230" r="190" fill="#0b5ad1" />
+    <path fill="#191c23" d="M24 16h38l-6 50H18Z" />
+    <text x="30" y="47" fill="#fff" font-size="27" font-weight="700">selector</text>
+    <rect x="326" y="16" width="70" height="32" rx="16" fill="#191c23" />
+    <circle cx="344" cy="32" r="8" fill="none" stroke="#fff" stroke-width="1.8" />
+    <path fill="none" stroke="#fff" stroke-width="1.5" d="M336 32h16M344 24c-3.5 4.5-3.5 11.5 0 16 3.5-4.5 3.5-11.5 0-16Z" />
+    <text x="358" y="37.5" fill="#fff" font-size="14" font-weight="700">EN</text>
+    <text x="20" y="112" fill="#fff" font-size="24" font-weight="700">How can we help?</text>
+
+    <rect x="22" y="170" width="318" height="74" rx="8" fill="#272d39" />
+    <text x="36" y="197" fill="#fff" font-size="12" font-weight="700">English Support</text>
+    <text x="36" y="224" fill="#fff" font-size="15">Hey there! How can we help?</text>
+
+    <rect x="70" y="264" width="318" height="48" rx="6" fill="#2cc539" />
+    <text x="84" y="294" fill="#191c23" font-size="15">Oi! Você fala português?</text>
+
+    <rect x="22" y="332" width="318" height="74" rx="8" fill="#272d39" />
+    <text x="36" y="359" fill="#fff" font-size="12" font-weight="700">Suporte português</text>
+    <text x="36" y="386" fill="#fff" font-size="15">Ei! Como podemos ajudar?</text>
+
+    <rect x="70" y="426" width="318" height="68" rx="6" fill="#e5173f" />
+    <text x="88" y="454" fill="#fff" font-size="15" font-weight="700">Я хотел бы узнать о текущих</text>
+    <text x="88" y="475" fill="#fff" font-size="15" font-weight="700">бонусах и акциях</text>
+
+    <rect y="556" width="410" height="80" fill="#191c23" />
+    <text x="24" y="602" fill="#6b7280" font-size="16">Write a reply...</text>
+    <circle cx="364" cy="596" r="26" fill="#fff" />
+    <path fill="#191c23" d="M353 583v10l16 3-16 3v10l23-13Z" />
+  </g>
+</svg>

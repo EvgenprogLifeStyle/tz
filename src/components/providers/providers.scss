@@ -1,0 +1,58 @@
+.providers {
+  overflow: hidden;
+  padding-block: var(--p24);
+  border-radius: var(--br-lg);
+  background: var(--bg-panel);
+
+  @include mmd {
+    padding-block: rem(52);
+  }
+
+  //.providers__list
+  &__list {
+    display: flex;
+    overflow-x: auto;
+    padding-left: var(--p32);
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    //.providers__list--running
+    &--running {
+      width: max-content;
+      overflow: visible;
+      padding-left: 0;
+      animation: providers-scroll 30s linear infinite;
+    }
+  }
+
+  &:hover .providers__list--running {
+    animation-play-state: paused;
+  }
+
+  //.providers__item
+  &__item {
+    flex-shrink: 0;
+    @include w_h(48);
+    margin-right: rem(96);
+    opacity: 0.75;
+    transition: opacity var(--transition);
+
+    @include hover {
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@keyframes providers-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}

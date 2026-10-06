@@ -1,0 +1,79 @@
+<footer class="footer">
+  <div class="footer__inner container">
+    <ul class="footer__payments" aria-label="Способы оплаты">
+      @@loop('payment.html', [
+        {"icon":"pay-card","name":"Банковский перевод"},
+        {"icon":"pay-play","name":"Google Pay"},
+        {"icon":"pay-mcvisa","name":"Mastercard и Visa"},
+        {"icon":"pay-yoomoney","name":"ЮMoney"},
+        {"icon":"pay-p","name":"Payeer"},
+        {"icon":"bitcoin","name":"Bitcoin"},
+        {"icon":"pay-tether","name":"USDT"},
+        {"icon":"pay-mts","name":"МТС"},
+        {"icon":"pay-qiwi","name":"QIWI"},
+        {"icon":"pay-beeline","name":"Билайн"}
+      ])
+    </ul>
+    <div class="footer__info">
+      <p class="footer__copy">Copyright © 2019 - 2026 Selector. All rights reserved.</p>
+      <ul class="footer__contacts">
+        <li>
+          <a href="https://vk.com/" class="footer__contact" target="_blank" rel="noopener">
+            <svg class="icon icon-16" aria-hidden="true"><use xlink:href="@img/sprite.svg#vk"></use></svg>
+            @selector_off2
+          </a>
+        </li>
+        <li>
+          <a href="https://t.me/" class="footer__contact" target="_blank" rel="noopener">
+            <svg class="icon icon-16" aria-hidden="true"><use xlink:href="@img/sprite.svg#telegram"></use></svg>
+            @selector_official
+          </a>
+        </li>
+        <li>
+          <a href="mailto:support@example.com" class="footer__contact">
+            <svg class="icon icon-16" aria-hidden="true"><use xlink:href="@img/sprite.svg#mail"></use></svg>
+            support@example.com
+          </a>
+        </li>
+      </ul>
+      <nav class="footer__nav" aria-label="Информация">
+        <a href="/terms" class="footer__nav-link">Правила</a>
+        <a href="/responsible-gaming" class="footer__nav-link">Ответственная игра</a>
+        <a href="/privacy" class="footer__nav-link">Конфиденциальность</a>
+        <a href="#faq" class="footer__nav-link">Помощь</a>
+        <span class="footer__version">10.16</span>
+      </nav>
+    </div>
+    <p class="footer__legal">
+      Сайт предназначен только для лиц старше 18 лет. Азартные игры могут вызывать зависимость — играйте ответственно и не
+      рассматривайте игру как способ заработка. +18.
+    </p>
+    <div class="footer__meta">
+      <label class="footer__lang">
+        <span class="flag" aria-hidden="true"></span>
+        <select class="footer__lang-select" aria-label="Язык сайта">
+          <option value="ru" selected>Русский</option>
+          <option value="en">English</option>
+        </select>
+        <svg class="footer__lang-arrow icon icon-16" aria-hidden="true"><use xlink:href="@img/sprite.svg#chevron"></use></svg>
+      </label>
+      <span class="footer__license" aria-hidden="true">GCB</span>
+      @@include('../logo/logo.html', {"class":"footer__logo"})
+    </div>
+  </div>
+  <div class="footer__bottom container">
+    <nav class="footer__bottom-nav" aria-label="Документы">
+      <a href="/terms" class="footer__bottom-link">Terms of use</a>
+      <a href="/responsible-gaming" class="footer__bottom-link">Responsibility</a>
+      <a href="/contacts" class="footer__bottom-link">Contacts</a>
+      <a href="https://vk.com/" class="footer__bottom-link" target="_blank" rel="noopener">
+        <svg class="icon icon-16" aria-hidden="true"><use xlink:href="@img/sprite.svg#vk"></use></svg>
+        /selector_casino
+      </a>
+    </nav>
+    <p class="footer__age">
+      <span class="footer__age-badge">18</span>
+      <span class="footer__age-text">Gambling<br />comission</span>
+    </p>
+  </div>
+</footer>

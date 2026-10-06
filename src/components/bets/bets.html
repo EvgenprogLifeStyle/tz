@@ -1,0 +1,23 @@
+<div class="bets" role="region" aria-labelledby="bets-title" tabindex="0">
+  <table class="bets__table">
+    <thead>
+      <tr>
+        <th scope="col">Игра</th>
+        <th scope="col">Игрок</th>
+        <th scope="col">Ставка</th>
+        <th scope="col">Коэффициент</th>
+        <th scope="col">Выплата</th>
+      </tr>
+    </thead>
+    <tbody>
+      @@loop('bets-row.html', [
+        {"game":"Book of Santa","player":"White Tick","bet":"500","coef":"10","win":"5 000"},
+        {"game":"Fortune Rabbit","player":"GoodWin42","bet":"500","coef":"17,5","win":"8 750"},
+        {"game":"Pyramid Linx","player":"Blue Octopus","bet":"500","coef":"2","win":"1 000"},
+        {"game":"Arowanas Luck","player":"Алексей А.","bet":"2 000","coef":"8","win":"16 000"},
+        {"game":"Candy Burst","player":"Ven4at","bet":"540","coef":"4,6","win":"2 484"},
+        {"game":"Luck of Tiger","player":"Amaranth Sloth","bet":"660","coef":"2,3","win":"1 518"}
+      ])
+    </tbody>
+  </table>
+</div>

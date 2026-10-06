@@ -1,0 +1,30 @@
+<header class="header">
+  <div class="header__inner container flex cv gap_16">
+    @@include('../logo/logo.html', {"class":"header__logo"})
+    <nav class="header__nav" id="header-nav" aria-label="Основное меню">
+      @@loop('nav-link.html', [
+        {"href":"./","icon":"home","title":"Главная","mod":""},
+        {"href":"#games","icon":"play","title":"Слоты","mod":""},
+        {"href":"#bonuses","icon":"gift","title":"Бонусы","mod":"header__nav-link--yellow"},
+        {"href":"#bets","icon":"link","title":"Ставки","mod":"header__nav-link--purple"},
+        {"href":"#community","icon":"chat","title":"Отзывы","mod":""},
+        {"href":"#faq","icon":"support","title":"Вопросы","mod":""}
+      ])
+    </nav>
+    <div class="header__actions">
+      <a href="/login" class="header__btn btn btn--outline btn--sm">
+        <svg class="header__btn-icon icon icon-20" aria-hidden="true"><use xlink:href="@img/sprite.svg#login"></use></svg>
+        <span class="header__btn-text">Войти</span>
+      </a>
+      <a href="/register" class="header__btn btn btn--primary btn--sm">
+        <svg class="header__btn-icon icon icon-20" aria-hidden="true"><use xlink:href="@img/sprite.svg#user-plus"></use></svg>
+        <span class="header__btn-text">Регистрация</span>
+      </a>
+    </div>
+    <button type="button" class="header__burger" aria-controls="header-nav" aria-expanded="false" aria-label="Открыть меню">
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </button>
+  </div>
+</header>

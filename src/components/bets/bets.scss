@@ -1,0 +1,59 @@
+.bets {
+  overflow-x: auto;
+  padding: 0 var(--p16);
+  border-radius: var(--br-lg);
+  background: var(--bg-panel);
+  scrollbar-width: thin;
+
+  //.bets__table
+  &__table {
+    width: 100%;
+    min-width: rem(600);
+    font-size: rem(14);
+
+    th,
+    td {
+      padding: rem(16) rem(12);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      white-space: nowrap;
+
+      &:first-child {
+        text-align: left;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    th {
+      color: var(--text-muted);
+      font-size: rem(11);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    td {
+      font-weight: 500;
+    }
+
+    tbody tr {
+      transition: background-color var(--transition);
+
+      &:last-child td {
+        border-bottom: 0;
+      }
+
+      @include hover {
+        background: rgb(255 255 255 / 3%);
+      }
+    }
+  }
+
+  //.bets__game
+  &__game {
+    font-weight: 700;
+  }
+}

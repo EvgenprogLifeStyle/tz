@@ -1,0 +1,5 @@
+dist
+node_modules
+src/scss/base/libs
+**/*.min.css
+**/*.min.scss

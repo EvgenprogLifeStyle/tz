@@ -1,0 +1,30 @@
+.bonus-card {
+  display: flex;
+  gap: var(--gap16);
+  padding: var(--p24);
+  border: 1px solid transparent;
+  border-radius: var(--br-lg);
+  background: var(--bg-panel);
+  transition: border-color var(--transition);
+
+  @include hover {
+    border-color: var(--red);
+  }
+
+  //.bonus-card__icon
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    @include w_h(44);
+    border-radius: var(--br);
+    background: var(--red);
+    color: var(--white);
+  }
+
+  //.bonus-card__text
+  &__text {
+    margin-top: rem(6);
+  }
+}

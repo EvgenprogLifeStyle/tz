@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ru">
+  @@include('components/head.html', { "title":"Selector — онлайн-казино и ставки на спорт | Бонус 150% по промокоду", "description":"Selector: более 6 500 слотов, live-казино и ставки на спорт. Промокод SELECTOR150 — 150% до 30 000 ₽ и 200 фриспинов на первый депозит, VIP-клуб и кешбэк." })
+  <body>
+    <div class="layout">
+      <div class="layout__main">
+        @@include('components/header/header.html')
+        <main class="layout__body">
+          <section class="hero container">
+            <span class="hero__deco" aria-hidden="true">selector</span>
+            <div class="hero__content">
+              <h1 class="h1">Selector — онлайн-казино и ставки на спорт</h1>
+              <div class="hero__bonus mt_24">
+                <p class="hero__bonus-text p2 medium">
+                  <span class="text-accent extrabold">150%</span> до 30 000 ₽ + 200 фриспинов на первый депозит
+                </p>
+                @@include('components/promo-code/promo-code.html', {"code":"SELECTOR150"})
+              </div>
+              <a href="/register" class="btn btn--primary btn--lg mt_24">Зарегистрироваться</a>
+              <p class="p3 text-muted medium mt_32">или войдите через</p>
+              <ul class="hero__social mt_12">
+                @@loop('components/social-btn/social-btn.html', [
+                  {"icon":"telegram","name":"Telegram"},
+                  {"icon":"vk","name":"ВКонтакте"},
+                  {"icon":"google","name":"Google"},
+                  {"icon":"ok","name":"Одноклассники"},
+                  {"icon":"steam","name":"Steam"}
+                ])
+              </ul>
+            </div>
+            <div class="hero__media">
+              <a href="#games" class="hero__card">
+                <span class="hero__card-img">
+                  <img src="@img/hero/casino.png" width="580" height="870" alt="Персонаж Selector — онлайн-казино" fetchpriority="high" />
+                </span>
+              </a>
+              <a href="#sport" class="hero__card hero__card--sport">
+                <span class="hero__card-img">
+                  <img src="@img/hero/sport.png" width="580" height="870" alt="Персонаж Selector — ставки на спорт" />
+                </span>
+              </a>
+            </div>
+          </section>
+
+          @@include('components/providers/providers.html', {"class":"container mt_32"})
+
+          <div class="showcase container mt_64" id="games">
+            <section class="showcase__card">
+              <h2 class="showcase__title h2">Селектор — бесконечный выбор игр. Бесконечный шанс на победу.</h2>
+              <ul class="showcase__list mt_24">
+                @@loop('components/showcase/showcase-item.html', [
+                  {"icon":"star","title":"Новинки"},
+                  {"icon":"seven","title":"Слоты"},
+                  {"icon":"live","title":"Live-казино"},
+                  {"icon":"cards","title":"Карточные игры"}
+                ])
+              </ul>
+              <a href="/register" class="btn btn--primary btn--lg mt_24">Зарегистрироваться</a>
+              <span class="showcase__mascot">
+                <img src="@img/mascot/casino.svg" width="260" height="260" alt="Маскот Selector — монетка в тёмных очках" loading="lazy" />
+              </span>
+              <span class="showcase__deco" aria-hidden="true">S</span>
+            </section>
+            <section class="showcase__card showcase__card--sport" id="sport">
+              <h2 class="showcase__title h2">Твой билет в мир больших событий: смотри, делай ставки, выигрывай</h2>
+              <ul class="showcase__list mt_24">
+                @@loop('components/showcase/showcase-item.html', [
+                  {"icon":"ball","title":"Спорт"},
+                  {"icon":"gamepad","title":"Киберспорт"},
+                  {"icon":"trophy","title":"Турниры"},
+                  {"icon":"tv","title":"Прямые эфиры"}
+                ])
+              </ul>
+              <a href="/register" class="btn btn--green btn--lg mt_24">Зарегистрироваться</a>
+              <span class="showcase__mascot">
+                <img src="@img/mascot/sport.svg" width="260" height="260" alt="Маскот Selector — монетка с глазами-долларами" loading="lazy" />
+              </span>
+              <span class="showcase__deco" aria-hidden="true">S</span>
+            </section>
+          </div>
+
+          <section class="payments container mt_64">
+            <span class="payments__img">
+              <img src="@img/payments/cards.svg" width="460" height="368" alt="Банковские карты Selector: Visa и Mastercard" loading="lazy" />
+            </span>
+            <div>
+              <h2 class="h2">Играйте уверенно с широким выбором крипто- и денежных валют</h2>
+              <p class="p1 mt_16">
+                К вашим услугам надёжные депозиты и мгновенные выводы во множестве крипто- и денежных валют. И всё это — без
+                минимального лимита, с гибкой системой платежей и безопасным онлайн-хранилищем.
+              </p>
+              <a href="/register" class="btn btn--primary btn--lg mt_32">Регистрация</a>
+            </div>
+          </section>
+
+          <section class="bonuses container mt_64" id="bonuses">
+            <div>
+              <h2 class="h2">Делайте больше ставок, и ваше вознаграждение как игрока Selector VIP-Club будет расти</h2>
+              <p class="p1 mt_16">
+                Откройте для себя мир уникальных привилегий, персонализированного сервиса и эксклюзивных бонусов — только для
+                игроков уровня Selector VIP-клуба.
+              </p>
+              <a href="/register" class="btn btn--primary btn--lg mt_32">Вступить в VIP-клуб</a>
+            </div>
+            <ul class="bonuses__list">
+              @@loop('components/bonus-card/bonus-card.html', [
+                {"icon":"rocket","title":"Еженедельные бонусы","text":"Каждую неделю вы получаете вознаграждение, размер которого зависит от недавней игровой активности. Чем больше ставок, тем выше бонусы."},
+                {"icon":"crown","title":"Ваш персональный VIP-менеджер","text":"Эксклюзивный доступ к персональному VIP-менеджеру, который поможет решить любые игровые вопросы."},
+                {"icon":"level","title":"Выплаты за переход на новый уровень","text":"Получайте вознаграждение при каждом переходе на новый уровень. Чем выше вы поднимаетесь, тем выше выплата."},
+                {"icon":"cashback","title":"Бонус за недавнюю игру","text":"Хотите вернуть проигранное? Selector возвращает часть средств при каждом переходе на новый уровень."}
+              ])
+            </ul>
+          </section>
+
+          <section class="support container mt_64">
+            <span class="support__deco" aria-hidden="true">se</span>
+            <div>
+              <h2 class="h2">Наша служба поддержки говорит на вашем языке</h2>
+              <p class="p1 mt_16">К вашим услугам круглосуточная помощь от нашей службы поддержки онлайн на вашем родном языке.</p>
+            </div>
+            <span class="support__img">
+              <img src="@img/support/chat.svg" width="410" height="636" alt="Чат поддержки Selector: операторы отвечают на английском и португальском языках" loading="lazy" />
+            </span>
+          </section>
+
+          <section class="container mt_64" id="bets">
+            <div class="center">
+              <h2 class="h2" id="bets-title">Следите за ставками, которые делаются прямо сейчас</h2>
+              <p class="p1 mt_16">
+                Ознакомьтесь со ставками в популярных играх и на спортивные события в реальном времени и оцените, сколько вы
+                могли бы выиграть.
+              </p>
+            </div>
+            <div class="mt_32">@@include('components/bets/bets.html')</div>
+          </section>
+
+          <section class="community container mt_64" id="community">
+            <span class="community__img">
+              <img src="@img/community/slots.svg" width="380" height="380" alt="Популярные слоты сообщества Selector" loading="lazy" />
+            </span>
+            <div>
+              <h2 class="h2">Присоединяйтесь к лучшему сообществу игроков</h2>
+              <p class="p1 mt_16">
+                От новичков и случайных посетителей до крупных игроков и экспертов — все в нашем сообществе любят поддерживать
+                друг друга. Получайте советы и постигайте хитрости игры в нашем онлайн-чате, на форуме и прочих ресурсах.
+              </p>
+              <a href="/community" class="btn btn--primary btn--lg mt_32">Присоединиться к сообществу</a>
+            </div>
+          </section>
+
+          <section class="review container mt_64" id="review">
+            <div class="review__text text-block">
+              <h2>Обзор онлайн-казино Selector</h2>
+              <p>
+                <strong>Selector</strong> — онлайн-платформа, которая объединяет казино и ставки на спорт в одном аккаунте.
+                На сайте собрано более 6 500 игровых автоматов от 40 провайдеров, среди которых Pragmatic Play, NetEnt,
+                Play’n GO, Yggdrasil и Quickspin, а также столы с живыми дилерами.
+              </p>
+              <p>
+                Интерфейс одинаково удобен на компьютере и смартфоне: лобби разбито на разделы, есть поиск по провайдерам и
+                названиям игр. Возврат игрокам в слотах составляет 95–97%.
+              </p>
+              <h3>Почему выбирают Selector</h3>
+              <ul>
+                <li>Приветственный бонус 150% до 30 000 ₽ и 200 фриспинов по промокоду <strong>SELECTOR150</strong>.</li>
+                <li>Пополнение и вывод картами, через СБП и в криптовалюте без минимального лимита.</li>
+                <li>Круглосуточная поддержка на русском языке в онлайн-чате.</li>
+                <li>VIP-клуб с кешбэком, еженедельными бонусами и персональным менеджером.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="faq container mt_64" id="faq">
+            <div class="faq__intro">
+              <h2 class="h2">Всё ещё остались вопросы?</h2>
+              <a href="#review" class="btn btn--primary btn--lg mt_24">Читайте наше руководство</a>
+            </div>
+            <div class="faq__list">
+              @@loop('components/faq-item/faq-item.html', [
+                {"open":"open","question":"Что представляет собой официальный сайт Selector casino?","answer":"Официальный сайт Selector casino — платформа с широким выбором азартных игр и развлечений. Интуитивный интерфейс и адаптивный дизайн обеспечивают комфортный доступ как с компьютера, так и с мобильных устройств. На сайте — слоты, настольные игры и живое казино, а также регулярные акции и бонусы для новых и постоянных игроков."},
+                {"open":"","question":"Регистрация и вход в Selector казино","answer":"Зарегистрироваться можно через социальные сети или по логину и паролю. Подтверждение не требуется — сразу после создания аккаунта доступны пополнение счёта, бонусы и вывод выигрыша."},
+                {"open":"","question":"Как получить приветственный бонус?","answer":"Введите промокод SELECTOR150 при первом пополнении счёта. Бонус 150% до 30 000 ₽ и 200 фриспинов начислятся автоматически."},
+                {"open":"","question":"Игровые автоматы Selector казино","answer":"Более 6 500 слотов от 40 разработчиков, включая аппараты с прогрессивными джекпотами и игры с живыми дилерами. Все игры в лобби отсортированы по разделам, есть поиск по провайдерам."},
+                {"open":"","question":"Депозиты и вывод средств","answer":"Выплаты доступны на банковские карты, через СБП и в криптовалюте. Заявки обрабатываются от 15 минут до 24 часов, при первом выводе может потребоваться верификация."}
+              ])
+            </div>
+          </section>
+        </main>
+        @@include('components/footer/footer.html')
+      </div>
+      @@include('components/live/live.html')
+    </div>
+    <script src="js/app.min.js" defer></script>
+  </body>
+</html>

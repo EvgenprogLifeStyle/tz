@@ -1,0 +1,122 @@
+:root {
+  --bg: #20242d;
+  --bg-panel: #272d39;
+  --bg-dark: #191c23;
+  --bg-control: #373f4c;
+  --white: #fff;
+  --text-muted: #a3aab8;
+  --text-dim: #6b7280;
+  --bg-footer: #1b1e25;
+  --bg-footer-strip: #22262f;
+  --border: rgb(255 255 255 / 8%);
+
+  --primary: #0a74fa;
+  --primary-hover: #3a8fff;
+  --primary-glow: rgb(10 116 250 / 35%);
+  --blue-dark: #0b3d95;
+  --green: #2cc539;
+  --green-hover: #45d651;
+  --green-dark: #1c8f1a;
+  --money: #33d35c;
+  --red: #e5173f;
+  --yellow: #ffc700;
+  --yellow-soft: rgb(255 199 0 / 14%);
+  --purple: #8c62ff;
+  --navy: #143568;
+  --navy-light: #0f418a;
+  --blue-bright: #0759d2;
+  --green-bright: #3fd84c;
+
+  --telegram: #2aabee;
+  --vk: #0077ff;
+  --ok: #ee8208;
+  --x: #000;
+  --viber: #7360f2;
+  --whatsapp: #25d366;
+
+  --flag-white: #fff;
+  --flag-blue: #0039a6;
+  --flag-red: #d52b1e;
+
+  --font-main: 'Rubik', Arial, sans-serif;
+  --font-size: 15rem;
+  --font: 400 var(--font-size) / 1.5 var(--font-main);
+
+  --maxWidthContainer: 1220rem;
+  --pi: 16rem;
+  --heightHeader: 64rem;
+  --widthAside: 300rem;
+  --br: 8rem;
+  --br-lg: 16rem;
+  --transition: 0.3s ease;
+
+  --H1: 32rem;
+  --H2: 26rem;
+  --H3: 20rem;
+  --H4: 17rem;
+
+  --h8: 8rem;
+  --h12: 12rem;
+  --h16: 16rem;
+  --h24: 20rem;
+  --h32: 24rem;
+  --h48: 32rem;
+  --h64: 48rem;
+
+  --gap4: 4rem;
+  --gap8: 8rem;
+  --gap12: 12rem;
+  --gap16: 12rem;
+  --gap24: 16rem;
+  --gap32: 24rem;
+
+  --p16: 16rem;
+  --p24: 20rem;
+  --p32: 20rem;
+
+  @include msm {
+    --font-size: 16rem;
+    --pi: 24rem;
+
+    --H1: 40rem;
+    --H2: 30rem;
+
+    --h24: 24rem;
+    --h32: 28rem;
+    --h48: 40rem;
+    --h64: 64rem;
+
+    --gap16: 16rem;
+    --gap24: 20rem;
+    --gap32: 28rem;
+
+    --p24: 24rem;
+    --p32: 32rem;
+  }
+
+  @include mmd {
+    --heightHeader: 80rem;
+
+    --H1: 52rem;
+    --H2: 36rem;
+    --H3: 22rem;
+    --H4: 18rem;
+
+    --h32: 32rem;
+    --h48: 48rem;
+    --h64: 80rem;
+
+    --gap24: 24rem;
+    --gap32: 32rem;
+
+    --p32: 40rem;
+  }
+
+  @include mlg {
+    --pi: 32rem;
+
+    --H1: 58rem;
+    --H2: 40rem;
+    --H3: 24rem;
+  }
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460 368">
+  <defs>
+    <g id="logo">
+      <path fill="#0a74fa" d="M-3-19h26l-3 26H-6Z" />
+      <text x="0" y="0" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="700">selector</text>
+    </g>
+    <g id="back">
+      <rect width="404" height="252" rx="16" fill="#191c23" />
+      <rect x="6" y="6" width="392" height="240" rx="12" fill="#20242d" />
+      <path fill="currentColor" d="M222 6h164a12 12 0 0 1 12 12v40H283Z" />
+      <text x="378" y="38" fill="#fff" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1" text-anchor="end">PAY YOUR WAY</text>
+      <use xlink:href="#logo" x="28" y="44" />
+    </g>
+  </defs>
+  <use xlink:href="#back" x="56" y="0" color="#f39200" />
+  <use xlink:href="#back" x="38" y="34" color="#0e9c8c" />
+  <use xlink:href="#back" x="19" y="68" color="#0a74fa" />
+  <g transform="translate(0 112)">
+    <rect width="404" height="256" rx="16" fill="#191c23" />
+    <rect x="8" y="8" width="388" height="240" rx="12" fill="#20242d" stroke="#e9eaee" stroke-width="2" />
+    <path fill="#e9eaee" d="M180 8h204a12 12 0 0 1 12 12v120ZM8 160l150 88H20a12 12 0 0 1-12-12Z" />
+    <use xlink:href="#logo" x="32" y="52" />
+    <text x="376" y="40" fill="#20242d" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2" text-anchor="end">PAY YOUR WAY</text>
+    <rect x="137" y="62" width="130" height="130" rx="24" fill="#e9eaee" />
+    <circle cx="186" cy="110" r="24" fill="#eb001b" />
+    <circle cx="218" cy="110" r="24" fill="#f79e1b" fill-opacity=".9" />
+    <text x="202" y="172" fill="#1a1f71" font-family="Arial, sans-serif" font-size="34" font-style="italic" font-weight="900" text-anchor="middle">VISA</text>
+    <text x="32" y="226" fill="#20242d" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1">CARD</text>
+    <rect x="300" y="204" width="76" height="30" rx="15" fill="#fff" stroke="#20242d" stroke-width="2" />
+    <text x="338" y="224" fill="#20242d" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" text-anchor="middle">FIAT</text>
+  </g>
+</svg>

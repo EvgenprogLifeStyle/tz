@@ -1,0 +1,254 @@
+.footer {
+  padding: var(--h48) 0 var(--h32);
+
+  //.footer__inner
+  &__inner {
+    padding: 0 var(--p16) var(--p32);
+    background: var(--bg-footer);
+
+    @include msm {
+      padding-inline: var(--p32);
+    }
+  }
+
+  //.footer__payments
+  &__payments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: rem(20) rem(28);
+    padding: rem(28) var(--p24);
+    background: var(--bg-footer-strip);
+
+    @include mmd {
+      padding-inline: rem(40);
+    }
+  }
+
+  //.footer__payment
+  &__payment {
+    display: flex;
+  }
+
+  //.footer__info
+  &__info {
+    display: grid;
+    justify-items: center;
+    gap: rem(12);
+    padding: var(--h32) 0 var(--h24);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+
+  //.footer__copy
+  &__copy {
+    font-size: rem(13);
+    font-weight: 700;
+  }
+
+  //.footer__contacts
+  &__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(8) rem(16);
+  }
+
+  //.footer__contact
+  &__contact {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(6);
+    color: var(--text-muted);
+    font-size: rem(13);
+    font-weight: 500;
+    transition: color var(--transition);
+
+    svg {
+      color: var(--primary);
+    }
+
+    @include hover {
+      color: var(--white);
+    }
+  }
+
+  //.footer__nav
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(8) rem(12);
+
+    //.footer__nav-link
+    &-link {
+      color: var(--text-muted);
+      font-size: rem(13);
+      font-weight: 500;
+      transition: color var(--transition);
+
+      @include hover {
+        color: var(--white);
+      }
+    }
+  }
+
+  //.footer__version
+  &__version {
+    color: var(--text-dim);
+    font-size: rem(13);
+  }
+
+  //.footer__legal
+  &__legal {
+    margin-top: var(--h24);
+    color: var(--text-dim);
+    font-size: rem(12);
+    font-weight: 500;
+    text-align: center;
+
+    @include mmd {
+      text-align: right;
+    }
+  }
+
+  //.footer__meta
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--h16);
+
+    > * + * {
+      margin-left: rem(20);
+      padding-left: rem(20);
+      border-left: 1px solid var(--border);
+    }
+  }
+
+  //.footer__lang
+  &__lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    min-width: rem(200);
+    min-height: rem(50);
+    padding: 0 rem(14);
+    border: 1px solid var(--border);
+    border-radius: var(--br);
+    cursor: pointer;
+
+    //.footer__lang-select
+    &-select {
+      flex: 1;
+      appearance: none;
+      background: none;
+      font-size: rem(14);
+      font-weight: 700;
+      cursor: pointer;
+
+      option {
+        background: var(--bg-dark);
+      }
+    }
+
+    //.footer__lang-arrow
+    &-arrow {
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+  }
+
+  //.footer__license
+  &__license {
+    min-height: rem(50);
+    display: flex;
+    align-items: center;
+    color: var(--text-dim);
+    font-size: rem(32);
+    font-weight: 800;
+  }
+
+  //.footer__logo
+  &__logo {
+    min-height: rem(50);
+    font-size: rem(18);
+  }
+
+  //.footer__bottom
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap16);
+    padding: var(--h32) var(--p16) 0;
+
+    @include msm {
+      padding-inline: rem(52);
+    }
+
+    //.footer__bottom-nav
+    &-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(8) rem(28);
+    }
+
+    //.footer__bottom-link
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      gap: rem(4);
+      color: var(--text-dim);
+      font-size: rem(13);
+      transition: color var(--transition);
+
+      @include hover {
+        color: var(--text-muted);
+      }
+    }
+  }
+
+  //.footer__age
+  &__age {
+    display: flex;
+    align-items: center;
+    gap: rem(14);
+    color: var(--text-dim);
+
+    //.footer__age-badge
+    &-badge {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include w_h(40);
+      border: 2px solid currentColor;
+      border-radius: 50%;
+      font-size: rem(16);
+      font-weight: 700;
+
+      &::after {
+        content: '+';
+        position: absolute;
+        top: rem(-10);
+        right: rem(-6);
+        padding: 0 rem(2);
+        background: var(--bg);
+        font-size: rem(16);
+        line-height: 1;
+      }
+    }
+
+    //.footer__age-text
+    &-text {
+      font-size: rem(14);
+      font-weight: 600;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+  }
+}

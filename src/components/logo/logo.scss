@@ -1,0 +1,28 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  font-size: rem(24);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+
+  @include msm {
+    font-size: rem(28);
+  }
+
+  //.logo__mark
+  &__mark {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: rem(-5) rem(-1) rem(-7) rem(-6);
+      background: var(--primary);
+      transform: skew(-6deg) rotate(-5deg);
+    }
+  }
+}
